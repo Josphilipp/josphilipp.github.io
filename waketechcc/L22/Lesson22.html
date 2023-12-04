@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 22 - Invoice Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        input, select {
+            width: 200px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+        #price1, #price2, #price3 {
+            width: 80px;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .item-label {
+            width: 100px;
+        }
+
+        .submit-btn, .reset-btn {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .reset-btn {
+            background-color: #f44336;
+            margin-left: 10px;
+        }
+    </style>
+    <title>Order Form</title>
+</head>
+<body>
+    <h1>Create Invoice</h1>
+    <form method="post" action="">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street"><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city"><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state"><br>
+
+            <label for="zip">ZIP:</label>
+            <input type="text" id="zip" name="zip"><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <fieldset>
+            <legend>Items Purchased</legend>
+            <div class="item-row">
+                <label class="item-label" for="item1">Item 1:</label>
+                <select id="item1" name="item1">
+                    <option value="--None--">-- None --</option>
+                    <option value="8 oz. Assorted Chocolates">8 oz. Assorted Chocolates</option>
+                    <option value="12 oz. Assorted Chocolates">12 oz. Assorted Chocolates</option>
+                    <option value="8 oz. Dark Chocolate Truffles">8 oz. Dark Chocolate Truffles</option>
+                    <option value="12 oz. Dark Chocolate Truffles">12 oz. Dark Chocolate Truffles</option>
+                </select>
+                <label class="item-label" for="price1">Price:</label>
+                $<input size="10" type="number" id="price1" name="price1" value="0">
+            </div>
+
+            <div class="item-row">
+                <label class="item-label" for="item2">Item 2:</label>
+                <select id="item2" name="item2">
+                    <option value="--None--">-- None --</option>
+                    <option value="8 oz. Assorted Chocolates">8 oz. Assorted Chocolates</option>
+                    <option value="12 oz. Assorted Chocolates">12 oz. Assorted Chocolates</option>
+                    <option value="8 oz. Dark Chocolate Truffles">8 oz. Dark Chocolate Truffles</option>
+                    <option value="12 oz. Dark Chocolate Truffles">12 oz. Dark Chocolate Truffles</option>
+                </select>
+                <label class="item-label" for="price2">Price:</label>
+                $<input type="number" id="price2" name="price2" value="0">
+            </div>
+
+            <div class="item-row">
+                <label class="item-label" for="item3">Item 3:</label>
+                <select id="item3" name="item3">
+                    <option value="--None--">-- None --</option>
+                    <option value="8 oz. Assorted Chocolates">8 oz. Assorted Chocolates</option>
+                    <option value="12 oz. Assorted Chocolates">12 oz. Assorted Chocolates</option>
+                    <option value="8 oz. Dark Chocolate Truffles">8 oz. Dark Chocolate Truffles</option>
+                    <option value="12 oz. Dark Chocolate Truffles">12 oz. Dark Chocolate Truffles</option>
+                </select>
+                <label class="item-label" for="price3">Price:</label>
+               $<input type="number" id="price3" name="price3" value="0">
+            </div>
+        </fieldset>
+
+        <button type="button" class="submit-btn" onclick="createInvoice();">Submit</button>
+    
+    </form>
+
+    <hr>
+    <!-- Invoice goes here -->
+    <div id="content"></div>
+    <script type="text/javascript" src="invoice.js"></script>
+</body>
+</html>

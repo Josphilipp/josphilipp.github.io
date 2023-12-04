@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #3b1900;
+    background-color: #f3eeeb;
+    margin: auto;
+    padding: 0;
+    height: 800px;
+}
+
+header {
+    border-top: 3px solid #3b1900;
+    border-bottom: 3px solid #3b1900;
+    margin: auto;
+    overflow: hidden;
+    width:80%;
+}
+
+
+.invoice-text {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logo img {
+    float: left;
+    width: 270px;
+    height: 120px;
+}
+
+main h1 {
+    display: block;
+    text-align:center;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+table, tr, td {
+    border: 1px solid black;
+}
+
+
