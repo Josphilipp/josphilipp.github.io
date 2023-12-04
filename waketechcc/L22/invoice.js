@@ -74,11 +74,7 @@ function createInvoice() {
     const newWindow = window.open('invoice.html', '_blank');
     const newWindowDocument = newWindow.document;
     newWindowDocument.open();
-  
-    // Write invoice content to the new window's body
-    const invoiceContentElement = newWindowDocument.getElementById('invoice-content');
-    invoiceContentElement.innerHTML = invoiceContent;
-  
+    newWindowDocument.write(invoiceContent);
     newWindowDocument.close();
   }
   
